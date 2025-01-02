@@ -5,19 +5,19 @@ import { Link } from 'react-router-dom';
 const Hero = () => {
   return (
     <div 
-      className="relative h-screen bg-cover bg-center" 
+      className="relative h-screen bg-center bg-cover" 
       style={{ 
         backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${heroImg})` 
       }}
     >
-      <div className=' max-sm:px-4 relative z-10 flex flex-col justify-center items-center h-full text-center'>
-        <h1 className='text-6xl max-sm:text-4xl font-bold mb-5 text-white drop-shadow-lg'>
+      <div className='relative z-10 flex flex-col items-center justify-center h-full text-center max-sm:px-4'>
+        <h1 className='mt-24 mb-5 text-6xl font-bold text-white max-sm:text-4xl drop-shadow-lg'>
           "Uncover the Latest Trends!"
         </h1>
-        <p className='text-xl mb-10 text-neutral-200 max-w-md'>
+        <p className='max-w-md mb-10 text-xl text-neutral-200'>
           Nam at congue diam etiam erat lectus, finibus eget commodo quis, congue diam etiam erat lectus.
         </p>
-        <Link to="/AllProducts" className=' rounded-2xl py-2 px-4 text-neutral-100 bg-red-600 hover:bg-red-700 transition duration-300 transform hover:scale-105'>
+        <Link to="/AllProducts" className='px-4 py-2 transition duration-300 transform bg-red-600 rounded-2xl text-neutral-100 hover:bg-red-700 hover:scale-105'>
           &gt;&gt; EXPLORE STORE
         </Link>
       </div>

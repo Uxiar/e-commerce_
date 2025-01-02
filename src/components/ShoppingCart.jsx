@@ -27,19 +27,19 @@ const ShoppingCart = () => {
     return (
         <>
             <Navbar />
-            <div className="max-w-7xl mx-auto p-6">
-                <h1 className="text-3xl font-bold mb-6 text-gray-800">Shopping Cart</h1>
+            <div className="p-6 mx-auto mt-28 max-w-7xl">
+                <h1 className="mb-6 text-3xl font-bold text-gray-800">Shopping Cart</h1>
 
                 {Data.length === 0 ? (
-                    <div className="text-center text-gray-600 text-lg font-medium mt-6">
+                    <div className="mt-6 text-lg font-medium text-center text-gray-600">
                         Your cart is empty.
                     </div>
                 ) : (
-                    <div className="grid lg:grid-cols-3 gap-6">
+                    <div className="grid gap-6 lg:grid-cols-3">
                         <div className="lg:col-span-2">
                             {Data.map((data, index) => (
                                 <div
-                                    className="flex flex-row max-sm:flex-col max-sm:gap-2 relative mb-6 p-4 border border-gray-300 rounded-lg shadow-sm bg-white"
+                                    className="relative flex flex-row p-4 mb-6 bg-white border border-gray-300 rounded-lg shadow-sm max-sm:flex-col max-sm:gap-2"
                                     key={index}
                                 >
                                     <div className="w-32 max-sm:w-full">
@@ -50,17 +50,17 @@ const ShoppingCart = () => {
                                         />
                                     </div>
                                     <div className="flex-grow ml-6">
-                                        <p className="text-xl font-semibold mb-2">{data.title}</p>
-                                        <p className="text-gray-600 mb-1">Category: {data.category}</p>
-                                        <p className="text-lg font-medium text-violet-700 mb-1">${data.price}</p>
+                                        <p className="mb-2 text-xl font-semibold">{data.title}</p>
+                                        <p className="mb-1 text-gray-600">Category: {data.category}</p>
+                                        <p className="mb-1 text-lg font-medium text-violet-700">${data.price}</p>
                                         <p className="text-sm text-gray-500">
                                             Shipping: {data.shippingInformation || 'Standard'}
                                         </p>
                                     </div>
 
-                                    <div className="ml-6 flex items-center">
-                                        <label className="block text-sm font-medium mb-1 mr-2">Qty:</label>
-                                        <select className="border border-gray-300 rounded-md py-1 px-3">
+                                    <div className="flex items-center ml-6">
+                                        <label className="block mb-1 mr-2 text-sm font-medium">Qty:</label>
+                                        <select className="px-3 py-1 border border-gray-300 rounded-md">
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -77,7 +77,7 @@ const ShoppingCart = () => {
                                     <div className="ml-6">
                                         <button
                                             onClick={() => deleteProduct(index)}
-                                            className="text-red-600 font-bold text-2xl top-0 right-2 absolute"
+                                            className="absolute top-0 text-2xl font-bold text-red-600 right-2"
                                         >
                                             &#215;
                                         </button>
@@ -86,8 +86,8 @@ const ShoppingCart = () => {
                             ))}
                         </div>
 
-                        <div className="border p-6 bg-gray-100 rounded-lg shadow-sm">
-                            <h2 className="text-2xl font-semibold mb-6">Order Summary</h2>
+                        <div className="p-6 bg-gray-100 border rounded-lg shadow-sm">
+                            <h2 className="mb-6 text-2xl font-semibold">Order Summary</h2>
 
                             <div className="flex justify-between mb-4">
                                 <p className="text-gray-600">Subtotal</p>
@@ -104,14 +104,14 @@ const ShoppingCart = () => {
                                 <p className="text-gray-800">${taxCost}</p>
                             </div>
 
-                            <div className="flex justify-between mt-4 pt-4 border-t-2">
-                                <p className="font-semibold text-lg">Order Total</p>
-                                <p className="font-semibold text-lg">${total}</p>
+                            <div className="flex justify-between pt-4 mt-4 border-t-2">
+                                <p className="text-lg font-semibold">Order Total</p>
+                                <p className="text-lg font-semibold">${total}</p>
                             </div>
 
                             <button
                                 onClick={checkoutHandler}
-                                className="bg-violet-700 text-white text-lg py-3 px-6 rounded-md w-full mt-6 transition-transform transform hover:scale-105"
+                                className="w-full px-6 py-3 mt-6 text-lg text-white transition-transform transform rounded-md bg-violet-700 hover:scale-105"
                             >
                                 Proceed to Checkout
                             </button>

@@ -13,10 +13,10 @@ function AllProducts() {
       .then(res => res.json())
       .then(data => setProducts(data.products));
   }, []);
-
+ 
 
   if (products.length === 0) {
-    return  <div className="flex items-center justify-center min-h-screen">
+    return  <div className="flex items-center justify-center min-h-screen ">
     <motion.img
         src={loading}
         alt="loading"
@@ -36,12 +36,12 @@ function AllProducts() {
   return (
     <>
         <Navbar/>
-      <div className='p-10 text-center'>
-        <h1 className='text-4xl mb-10'>All products</h1>
+      <div className='p-10 mt-20 text-center'>
+        <h1 className='mb-10 text-4xl'>All products</h1>
         <div className='grid grid-cols-4 gap-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1'>
           {products?.map((product) => (
             <Link to={`/singleProduct/${product.id}`} key={product.id} className='p-4 border shadow-md hover:shadow-lg'>
-              <img src={product.thumbnail} alt={product.title} className='h-50 w-full object-cover' />
+              <img src={product.thumbnail} alt={product.title} className='object-cover w-full h-50' />
               <h3 className='mt-2 text-lg font-bold'>{product.title}</h3>
               <p className='font-light'>{product.brand}</p>
 
@@ -55,8 +55,8 @@ function AllProducts() {
                 })}
               </div>
 
-              <p className='font-medium mt-3'>${product.price}</p>
-              <p className='font-semibold mt-4'>In Stock left: {product.stock}</p>
+              <p className='mt-3 font-medium'>${product.price}</p>
+              <p className='mt-4 font-semibold'>In Stock left: {product.stock}</p>
             </Link>
           ))}
         </div>

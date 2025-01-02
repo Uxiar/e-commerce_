@@ -17,12 +17,12 @@ function bestsellersDisplay() {
     return (
         <>
                 <Navbar/>
-            <div className='p-10'>
-                <h1 className='text-4xl text-center mb-10'>Products in {category}</h1>
+            <div className='p-10 mt-20'>
+                <h1 className='mb-10 text-4xl text-center'>Products in {category}</h1>
                 <div className='grid grid-cols-4 gap-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1'>
                     {products?.map((product) => (
                         <div key={product.id} className='p-4 border shadow-md'>
-                            <img src={product.thumbnail} alt={product.title} className='h-40 w-full object-cover' />
+                            <img src={product.thumbnail} alt={product.title} className='object-cover w-full h-40' />
                             <h3 className='mt-2 text-lg'>{product.title}</h3>
                         </div>
                     ))}

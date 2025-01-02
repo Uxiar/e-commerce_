@@ -35,12 +35,12 @@ function CategoriesLists() {
     return (
         <>
         <Navbar/>
-            <div className='px-20 mb-10 max-md:px-10 max-lg:px-16'>
-                <h1 className='text-2xl mb-6'>Shop by All Categories</h1>
+            <div className='px-20 mt-32 mb-10 max-md:px-10 max-lg:px-16'>
+                <h1 className='mb-6 text-2xl'>Shop by All Categories</h1>
                 <div className='grid grid-cols-4 gap-5 max-lg:grid-cols-3 max-md:grid-cols-2'>
                     {data?.map((products, index) => (
                         <Link to={`/category/${products}`}
-                            className='border rounded-lg bg-red-600 text-neutral-100 text-xl max-sm:text-sm text-center py-4 px-3 hover:bg-black shadow-lg transition duration-300transform hover:scale-105'
+                            className='px-3 py-4 text-xl text-center transition bg-red-600 border rounded-lg shadow-lg text-neutral-100 max-sm:text-sm hover:bg-black duration-300transform hover:scale-105'
                             key={index}
                         >
                             {products}

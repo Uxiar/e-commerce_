@@ -18,8 +18,8 @@ import accessories from "../assets/Accesories.png";
 // Custom next arrow button
 const NextArrow = ({ onClick }) => {
   return (
-    <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer" onClick={onClick}>
-      <button className="bg-gray-800 text-white p-2 ">&gt;
+    <div className="absolute right-0 z-10 transform -translate-y-1/2 cursor-pointer top-1/2" onClick={onClick}>
+      <button className="p-2 text-white bg-gray-800 rounded-full ">&gt;
       </button>
     </div>
   );
@@ -28,8 +28,8 @@ const NextArrow = ({ onClick }) => {
 // Custom previous arrow button
 const PrevArrow = ({ onClick }) => {
   return (
-    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer" onClick={onClick}>
-      <button className="bg-gray-800 text-white p-2 ">&lt;
+    <div className="absolute left-0 z-10 transform -translate-y-1/2 cursor-pointer top-1/2" onClick={onClick}>
+      <button className="p-2 text-white bg-gray-800 rounded-full ">&lt;
 
       </button>
     </div>
@@ -74,50 +74,50 @@ function Display() {
   return (
     <>
     
-    <div className='p-10 relative'>
-      <h1 className='text-4xl text-neutral-950 text-center py-10'>Shop by Top Categories</h1>
+    <div className='relative p-10'>
+      <h1 className='py-10 text-4xl text-center text-neutral-950'>Shop by Top Categories</h1>
       <Slider {...settings}>
-        <Link to="/category/mens-watches" className='p-4 hover:shadow-lg transition-shadow duration-300'>
+        <Link to="/category/mens-watches" className='p-4 transition-shadow duration-300 hover:shadow-lg'>
           <img src={watch} alt="Mens Watch" />
           <p className='text-3xl text-center'>Mens Watch</p>
         </Link>
 
-        <Link to="/category/mens-shoes" className='p-4 hover:shadow-lg transition-shadow duration-300'>
+        <Link to="/category/mens-shoes" className='p-4 transition-shadow duration-300 hover:shadow-lg'>
           <img src={shoes} alt="Shoes" />
           <p className='text-3xl text-center'>Shoes</p>
         </Link>
 
-        <Link to="/category/skin-care" className='p-4 hover:shadow-lg transition-shadow duration-300'>
+        <Link to="/category/skin-care" className='p-4 transition-shadow duration-300 hover:shadow-lg'>
           <img src={skincare} alt="Smartphone" />
           <p className='text-3xl text-center'>Skin-care</p>
         </Link>
 
-        <Link to="/category/mobile-accessories" className='p-4 hover:shadow-lg transition-shadow duration-300'>
+        <Link to="/category/mobile-accessories" className='p-4 transition-shadow duration-300 hover:shadow-lg'>
           <img src={accessories} alt="Accessories" />
           <p className='text-3xl text-center'>Mobile Acces...</p>
         </Link>
 
-        <Link to="/category/beauty" className='p-4 hover:shadow-lg transition-shadow duration-300'>
+        <Link to="/category/beauty" className='p-4 transition-shadow duration-300 hover:shadow-lg'>
           <img src={beauty} alt="Beauty" />
           <p className='text-3xl text-center'>Beauty</p>
         </Link>
 
-        <Link to="/category/furniture" className='p-4 hover:shadow-lg transition-shadow duration-300'>
+        <Link to="/category/furniture" className='p-4 transition-shadow duration-300 hover:shadow-lg'>
           <img src={furniture} alt="Furniture" />
           <p className='text-3xl text-center'>Furniture</p>
         </Link>
 
-        <Link to="/category/groceries" className='p-4 hover:shadow-lg transition-shadow duration-300'>
+        <Link to="/category/groceries" className='p-4 transition-shadow duration-300 hover:shadow-lg'>
           <img src={groceries} alt="Groceries" />
           <p className='text-3xl text-center'>Groceries</p>
         </Link>
 
-        <Link to="/category/fragrances" className='p-4 hover:shadow-lg transition-shadow duration-300'>
+        <Link to="/category/fragrances" className='p-4 transition-shadow duration-300 hover:shadow-lg'>
           <img src={fragrances} alt="Fragrances" />
           <p className='text-3xl text-center'>Fragrances</p>
         </Link>
 
-        <Link to="/category/tops" className='p-4 hover:shadow-lg transition-shadow duration-300'>
+        <Link to="/category/tops" className='p-4 transition-shadow duration-300 hover:shadow-lg'>
           <img src={tops} alt="Tops" />
           <p className='text-3xl text-center'>Tops</p>
         </Link>
